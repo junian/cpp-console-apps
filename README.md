@@ -1,4 +1,9 @@
-CppSamplePack
-=============
+# C/C++ Awesome Pack
 
-Sample Pack of C++ Codes
+This project contains some awesome c++ codes, packed in one.
+
+# License
+
+This project is licensed under [MIT][mit].
+
+[mit]: https://github.com/junian/CppAwesomePack/blob/master/LICENSE
