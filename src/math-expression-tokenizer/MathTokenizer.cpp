@@ -133,7 +133,6 @@ int main()
 
     while (true)
     {
-
         // input expression
         getline(cin, exp.str);
         exp.reset();
@@ -141,7 +140,7 @@ int main()
         // show tokens
         while ((s = exp.getToken()) != "")
         {
-            cout << s << endl;
+            std::cout << s << std::endl;
         }
     }
 
