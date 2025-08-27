@@ -5,7 +5,7 @@ You just need to input your weight in kg and your height in meter.
 The program will show output whether you're skinny (KURUS), IDEAL, or fat (GEMUK). 
 
 ```shell
-gcc -o app.exe BmiCalculator.cpp && ./app.exe
+APP="bmi_calculator"; gcc -o $APP.exe $APP.c && ./$APP.exe
 ```
 
 ## Reference

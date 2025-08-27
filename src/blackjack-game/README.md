@@ -3,5 +3,5 @@
 A simple blackjack game implemented in C/C++.
 
 ```shell
-gcc -o app.exe BlackjackGame.cpp && ./app.exe
+APP="blackjack_game"; gcc -o $APP.exe $APP.c && ./$APP.exe
 ```
