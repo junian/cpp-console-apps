@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 #include <stdlib.h>
 #include <time.h>
 #include <ctype.h>
@@ -72,7 +72,7 @@ int main(){
     
     //mulai permainan    
     play_game(maze, size, posX, posY, n);
-    getch();
+    getchar();
     for(i=1; i>=0; i--){
         free(posY[i]);
         free(posX[i]);
@@ -162,7 +162,7 @@ void play_game(char **maze, int size, int **posX, int **posY, int players){
     //selama belum ada yang kehabisan army
     while(total[0]>0 && total[1]>0){
         turn = !turn; //ganti giliran
-        system("cls");
+        system("clear");
         printf("Player %d's turn\n\n", turn+1);
         do{
             pos = rand()%players;
@@ -177,15 +177,15 @@ void play_game(char **maze, int size, int **posX, int **posY, int players){
                 dice2=rand()%6 + 1;
                 printf("\b\b\b%d %d", dice1, dice2);
             }while(!kbhit());
-            move=toupper(getch());
+            move=toupper(getchar());
         }while(move!='A'); 
         step = dice1 + dice2;
-        getch();
+        getchar();
         do{
-            system("cls");
+            system("clear");
             printf("Player %d's turn (Steps: %d)\n\n", turn+1, step);
             view_maze(maze, size, *x, *y);
-            move=toupper(getch());
+            move=toupper(getchar());
             if(step>0) {
                 switch(move){
                     case UP:
@@ -259,12 +259,12 @@ void play_game(char **maze, int size, int **posX, int **posY, int players){
             switch(move){
                 case 'A':
                     if(maze[bombX][bombY]!='O'){
-                        system("cls");
+                        system("clear");
                         printf("Press ARROW KEY to PLACE the BOMB ");
                         printf("or Press A to CANCEL this ACTION\n\n");
                         view_maze(maze, size, *x, *y);
                         do{
-                            move = toupper(getch());
+                            move = toupper(getchar());
                             switch(move){
                                 case UP:
                                     if(maze[*x-1][*y] == PATH){
@@ -305,7 +305,7 @@ void play_game(char **maze, int size, int **posX, int **posY, int players){
                     break;
                 case 'S':
                     if(maze[bombX][bombY] == 'O'){
-                        system("cls");
+                        system("clear");
                         printf("FIRE IN THE HOLE.....!!!\n\n");
                         boom(maze, bombX, bombY, total, size);
                     }
@@ -314,7 +314,7 @@ void play_game(char **maze, int size, int **posX, int **posY, int players){
                     total[turn]--;
                     if(maze[bombX][bombY] == 'O')
                         maze[bombX][bombY] = PATH;
-                    system("cls");
+                    system("clear");
                     printf("KAMIKAZE ATTACK...!!!\n\n");
                     boom(maze, *x, *y, total, size);
                     move = 'D';
@@ -325,7 +325,7 @@ void play_game(char **maze, int size, int **posX, int **posY, int players){
         if(maze[bombX][bombY] == 'O')
             maze[bombX][bombY] = PATH;
     }
-    system("cls");
+    system("clear");
     
     //untuk mengecek siapa pemenangnya
     if(total[0]>total[1]) printf("The Winner is Player 1\n\n");

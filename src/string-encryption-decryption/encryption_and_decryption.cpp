@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 #include <stdlib.h>
 
 #define ENCRYPT '1'
@@ -31,7 +31,7 @@ int main(){
     base_list[i] = '\0';
     
     do{
-        system("cls");
+        system("clear");
         printf("Encryption and Decryption Application\n");
         printf("=====================================");
         do{
@@ -42,7 +42,7 @@ int main(){
             printf("4. Exit\n");
             printf("Choose a command [1-4]: ");
             do{
-                command = getch(); 
+                command = getchar(); 
             }while(command<'1' || command>'4');
             if(command=='3' || command=='4') break;
             printf("%c", command);

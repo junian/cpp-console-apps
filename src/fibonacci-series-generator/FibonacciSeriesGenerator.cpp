@@ -9,7 +9,7 @@ int main(){
   char r;
   do{
     int n, x = 0, y = 1, z = 1;
-    system("cls");
+    system("clear");
     printf("Pencetak Deret Fibonacci\n");
     printf("========================\n\n");
     printf("Input N : ");

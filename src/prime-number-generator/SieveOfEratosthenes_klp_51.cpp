@@ -2,7 +2,7 @@
 //Sieve of Erastothenes
 
 #include <stdio.h>
-#include <conio.h>
+
 
 int main(){
   char isPrime[1000]; //gunakan variabel isPrime sebagai penentu kondisi
@@ -24,6 +24,6 @@ int main(){
         isPrime[j] = 0; //coret semua kelipatannya
     }
   }
-  getch();
+  getchar();
   return 0;
 }

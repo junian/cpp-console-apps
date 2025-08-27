@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 
 struct pecahan
 {
@@ -97,6 +97,6 @@ int main()
       printf("\n");
    }
    
-   getch();
+   getchar();
    return 0;
 }

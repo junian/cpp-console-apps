@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h> //kbhit()
+ //kbhit()
 #include <stdlib.h> //rand() srand() system("cls") _sleep();
 #include <time.h> //time(NULL)
 
@@ -23,7 +23,7 @@ int main(){
             adder = 1;//penambah/pengurang posisi
         char press;//utk menyimpan kondisi X ditekan atau tidak
         
-        system("cls");//bersihkan layar
+        system("clear");//bersihkan layar
         printf("Snakes and Ladders Game\n=======================\n\n");
         printf("%c ==> Player\n%c ==> Computer\n\n", 1,2);
         
@@ -74,7 +74,7 @@ int main(){
         //proses mulai dari rolling dice hingga mencetak board
         do{
           printf("\n\nPress any key to roll the dice...");
-          getch();
+          getchar();
           turn = !(turn);//pergantian giliran, 0 utk user, 1 utk AI
           printf("\n\nRolling Dice\n%c Turn\n\nPress X to stop:  ", icon[turn]);
           if(turn==0){//randomize untuk player
@@ -83,7 +83,7 @@ int main(){
                     dice = rand()%6+1;
                     printf("\b%d", dice);
                 }while(!kbhit());
-                press = getch();
+                press = getchar();
             }while(press != 'x' && press != 'X');
             //jika x atau X ditekan maka rolling akan berhenti
           }else{//random khusus AI
@@ -129,7 +129,7 @@ int main(){
         printf("\n\n%c WIN THE GAME...\n", icon[turn]);
         printf("\nWanna try again? [Y/N] ");
         do{
-            r=getch();
+            r=getchar();
         }while(r!='Y' && r!='y' && r!='N' && r!='n');
     }while(r=='y' || r=='Y');
     return 0;
@@ -139,21 +139,21 @@ int main(){
 void showBoard(int n, char *p1, char *p2, char *warp){
     int i, j, k;
     j = n*n;
-    system("cls");
+    system("clear");
     printf("Snakes and Ladders Game\n=======================\n\n");
     printf("%c ==> Player\n%c ==> Computer\n\n", 1,2);
 
     //cetak frame bagian atas
-    printf("É");
-    for(k = j-n; k<j; k++) printf("ÍÍÍÍÍÍÍÍÍÍÍË");
-    printf("\b»\nº");
+    printf("ï¿½");
+    for(k = j-n; k<j; k++) printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+    printf("\bï¿½\nï¿½");
     
     for(i=n; i>=1; i--){
         
         if(i!=n){
-            printf("Ì");
-            for(k = j-n; k<j; k++) printf("ÍÍÍÍÍÍÍÍÍÍÍÎ");
-            printf("\b¹\nº");
+            printf("ï¿½");
+            for(k = j-n; k<j; k++) printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+            printf("\bï¿½\nï¿½");
         }
         
         //setiap baris yang ganjil cetak board dari kiri ke kanan
@@ -161,40 +161,40 @@ void showBoard(int n, char *p1, char *p2, char *warp){
             for(k = j-n; k<j; k++){
                 printf(" %3d ", k+1);
                 if(*(warp+k) != 0)
-                    printf("- %3.0d º", *(warp+k));
+                    printf("- %3.0d ï¿½", *(warp+k));
                 else
-                    printf("      º", *(warp+k));
+                    printf("      ï¿½", *(warp+k));
             }    
-            printf("\nº");
+            printf("\nï¿½");
             for(k = j-n; k<j; k++)
-                printf("     %c     º", *(p1+k));
-            printf("\nº");
+                printf("     %c     ï¿½", *(p1+k));
+            printf("\nï¿½");
             for(k = j-n; k<j; k++)
-                printf("     %c     º", *(p2+k));
+                printf("     %c     ï¿½", *(p2+k));
        
         //setiap baris yang genap cetak board dari kanan ke kiri
         }else{
             for(k = j-1; k >= j-n; k--){
                 printf(" %3d ", k+1);
                 if(*(warp+k) != 0)
-                    printf("- %3.0d º", *(warp+k));
+                    printf("- %3.0d ï¿½", *(warp+k));
                 else
-                    printf("      º", *(warp+k));
+                    printf("      ï¿½", *(warp+k));
             }
-            printf("\nº");
+            printf("\nï¿½");
             for(k = j-1; k >= j-n; k--)
-                printf("     %c     º", *(p1+k));
-            printf("\nº");
+                printf("     %c     ï¿½", *(p1+k));
+            printf("\nï¿½");
             for(k = j-1; k >= j-n; k--)
-                printf("     %c     º", *(p2+k));
+                printf("     %c     ï¿½", *(p2+k));
         }
         printf("\n");
         j-=n;
     }
     
     //cetak frame bagian bawah
-    printf("È");
-    for(k=0; k<n; k++) printf("ÍÍÍÍÍÍÍÍÍÍÍÊ");
-    printf("\b¼");
+    printf("ï¿½");
+    for(k=0; k<n; k++) printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+    printf("\bï¿½");
     _sleep(250);
 }

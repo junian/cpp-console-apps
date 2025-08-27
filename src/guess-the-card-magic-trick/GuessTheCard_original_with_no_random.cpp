@@ -1,7 +1,7 @@
 //Program Penebak kartu pilihan user
 
 #include <stdio.h>
-#include <conio.h>
+
 #include <string.h>
 #include <stdlib.h>
 
@@ -34,7 +34,7 @@ void arrangeCard(){
 
 void read(char *chr){
   for(;;){
-    *chr=getch();
+    *chr=getchar();
     if(*chr != '1' && *chr != '2' && *chr != '3') continue;
     printf("%d\n", *chr-=48);
     return;
@@ -57,7 +57,7 @@ int main(){
   char r;
   do{
     char x;
-    system("cls");
+    system("clear");
     printf("Guess the Card\n");
     printf("==============\n\n");
     printf("Please choose a card in your mind...\n");
@@ -73,7 +73,7 @@ int main(){
     printf("\nYour Card is %s, right? ^_^", card[x-2][r-1]);
     printf("\n\nWanna try again? [Y/N] ");
     do{
-      r=getch();
+      r=getchar();
     }while(r!='Y' && r!='y' && r!='n' && r!='N');
   }while(r=='Y' || r=='y');
   return 0;

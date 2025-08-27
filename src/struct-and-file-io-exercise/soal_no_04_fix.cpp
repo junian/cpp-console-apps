@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 
 typedef struct mahasiswa
 {
@@ -24,6 +24,6 @@ int main()
       fflush(stdin);
       printf("%.2f %d\n", data2[i].nilai, data2[i].umur);
    }
-   getch();
+   getchar();
    return 0;
 }

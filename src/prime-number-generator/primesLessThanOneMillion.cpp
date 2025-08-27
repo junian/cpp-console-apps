@@ -1,7 +1,7 @@
 //Bilangan Prima Kurang dari 100
 
 #include <stdio.h>
-//#include <conio.h>
+//
 
 int main(){
   char isPrime;
@@ -16,6 +16,6 @@ int main(){
     }
     if (isPrime) printf("%8d", i);
   }
-  //getch();
+  //getchar();
   return 0;
 }

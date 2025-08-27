@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 
 struct manusia
 {
@@ -16,6 +16,6 @@ int main()
     data2 = &data1;
     puts(data2->nama);
     printf("%d", data2->umur);
-    getch();
+    getchar();
     return 0;
 }

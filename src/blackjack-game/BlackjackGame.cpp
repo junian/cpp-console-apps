@@ -21,7 +21,7 @@ int main(){
     struct player gamer, comp;
     gamer.poin = 0;
     comp.poin = 0;
-    system("cls");
+    system("clear");
     printf("BLACKJACK GAME\n");
     printf("==============\n");
     printf("Copyright (c) 2008 - Now() Junian.dev");

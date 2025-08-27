@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 
 int main(){
   int n, x=1;
@@ -23,6 +23,6 @@ int main(){
     }
     printf("\n");
   }
-  getch();
+  getchar();
   return 0;
 }

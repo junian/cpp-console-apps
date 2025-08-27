@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 #include <stdlib.h>
 
 //prototype fungsi pergerakan hanoi
@@ -14,7 +14,7 @@ int main(){
         char a[50], b[50], c[50]; //isi disk masing-masing tower
         int n, i, j, step=0; //mula-mula jumlah langkah dianggap 0
     
-        system("cls"); //bersihkan layar
+        system("clear"); //bersihkan layar
         printf("TOWER OF HANOI SOLVER\n");
         printf("=====================\n\n");
         do{
@@ -34,7 +34,7 @@ int main(){
         cetakDisk(a, b, c, n);
         
         printf("\nLet's move them to C\n\n");
-        getch();
+        getchar();
         
         //gerakkan hanoi
         hanoi(n, n, &step, 'A', 'B', 'C', a, b, c);
@@ -44,7 +44,7 @@ int main(){
         printf("\n\nWanna try again [Y/N]? ");
         
         do{
-           r=getch();
+           r=getchar();
         }while(r!='y' && r!='Y' && r!='n' && r!='N');
     }while(r=='y' || r=='Y'); 
     return 0;
@@ -84,7 +84,7 @@ void hanoi(int n, int jml, int *step, char src, char asst, char dest,
     //cetak langkah-langkahnya
     printf("\nStep %d, Move Disk %d from %c to %c\n", *step, n, src, dest);
     
-    getch();
+    getchar();
     
     //pindahkan disk di tower bantuan ke tower tujuan
     hanoi(n-1, jml, step, asst, src, dest, b, a, c);

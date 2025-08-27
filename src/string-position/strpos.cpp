@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 #include <stdlib.h>
 
 int strpos(char *string, char *substring){
@@ -25,7 +25,7 @@ int main(){
     char r, string[256], substring[256];    
     int x;
     do{
-        system("cls");
+        system("clear");
         printf("Program StrPos\n==============\n\n");
         printf("Masukkan String: ");
         fflush(stdin);
@@ -41,7 +41,7 @@ int main(){
             printf("\"%s\" tidak ditemukan di dalam \"%s\"", substring, string);
         printf("\nWanna try again [Y/N]? ");
         do{
-            r=getch();
+            r=getchar();
         }while(r!='Y' && r!='y' && r!='n' && r!='N');
     }while(r=='y' || r=='Y');
     return 0;

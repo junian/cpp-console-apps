@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 #include <stdlib.h>
 
 #define CTRL_Z 26
@@ -11,14 +11,14 @@ int main()
     char r;
     
     do{
-        system("cls");
+        system("clear");
         printf("1. Baca File\n");
         printf("2. Tulis File\n");
         printf("3. Baca dan tulis file\n\n");
         printf("Masukkan pilihan: ");
         
         do{
-            r=getch();
+            r=getchar();
         }while(r<'1' || r>'6');
         
         printf("%c\n\n", r);
@@ -63,7 +63,7 @@ int main()
         printf("\nIngin mengulang...?? [Y/N] ");
         
         do{
-            r=getch();
+            r=getchar();
         }while(r!='y' && r!='Y' && r!='n' && r!='N');
     }while(r=='y' || r=='Y');
     return 0;

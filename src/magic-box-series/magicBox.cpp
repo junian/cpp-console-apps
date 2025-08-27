@@ -1,13 +1,12 @@
 //Magic Box Application
 
 #include <stdio.h>
-#include <conio.h>
 #include <stdlib.h>
 
 int main(){
   char r;
   do{
-    system("cls");
+    system("clear");
     int n, poin = 1;
     printf("MAGIC BOX\n");
     printf("=========\n\n");
@@ -34,7 +33,7 @@ int main(){
     }
     printf("\nWanna try again? [Y/N] ");
     do{
-      r=getch();
+      r=getchar();
     }while(r!='Y' && r!='y' && r!='N' && r!='n');
  }while(r=='y' || r=='Y');
  return 0;

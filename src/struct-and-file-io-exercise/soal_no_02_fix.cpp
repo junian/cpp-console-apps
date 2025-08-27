@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 
 struct mahasiswa{
      char nama[50];
@@ -17,6 +17,6 @@ int main()
      gets(data.nama);
      scanf("%d", data.umur);
      cetakData(data);
-     getch();
+     getchar();
      return 0;
 }

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 #include <stdlib.h>
 #include <string.h>
 
@@ -19,7 +19,7 @@ int main(){
     int  i, j, n;
     
     do{
-        system("cls");
+        system("clear");
         printf("String Sorter\n=============\n\n");
         
         //input jumlah string
@@ -49,7 +49,7 @@ int main(){
         
         printf("\nIngin Mengulang [Y/N]? ");
         do{
-            r=getch();
+            r=getchar();
         }while(r!='Y' && r!='y' && r!='n' && r!='N');
     }while(r=='y' || r=='Y');
     

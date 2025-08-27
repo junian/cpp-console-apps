@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 
 int main(){
   int n, half;
@@ -24,6 +24,6 @@ int main(){
     }
     printf("\n\n");
   }
-  getch();
+  getchar();
   return 0;
 }

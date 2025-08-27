@@ -7,7 +7,7 @@
   ###################################################*/
 
 #include <stdio.h>
-#include <conio.h>
+
 #include <stdlib.h>
 
 char toUpper(char x);
@@ -17,7 +17,7 @@ int main(){
   do{
     char a[4]="GMS", k[4]="GMS";
     int i;
-    system("cls");
+    system("clear");
     printf("Game Gajah, Manusia, dan Semut\n");
     printf("==============================\n\n");
     printf("G: Gajah\nM: Manusia\nS: Semut");
@@ -25,7 +25,7 @@ int main(){
       printf("\n\nAnda: %s\nKomp: %s\n", a, k);
       printf("\nAnda memilih ");
       do{
-        p = getch();
+        p = getchar();
         p = toUpper(p);
       }while(p != 'G' && p != 'M' && p != 'S' || p == s);
       s = p;
@@ -48,7 +48,7 @@ int main(){
     printf("\nAnda KALAH!\n");
     printf("\nIngin Mengulang [Y/N]? ");
     do{
-      r = getch();
+      r = getchar();
       r = toUpper(r);
     }while(r != 'Y' && r != 'N');
   }while(r == 'Y');

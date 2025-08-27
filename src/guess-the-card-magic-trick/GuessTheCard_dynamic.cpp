@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 #include <stdlib.h>
 
 int yMax, xMax;
@@ -74,5 +74,5 @@ int main(){
   viewCard();
   scanf("%d", &x);
   printf("\nYour Card is %d, right? ^_^", card[y][x-1]);
-  getch();
+  getchar();
 }

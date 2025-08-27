@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 #include <stdlib.h>
 
 #define WALL    -2 //tembok maze
@@ -99,7 +99,7 @@ int main(){
                                  -2, -2,  0, -2,  0,  0,  0,  0, -2,  0, -2,
                                  -2,  0,  0, -2,  0,  0, -2,  0,  0,  0, -2,
                                  -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2};
-        system("cls");
+        system("clear");
         view_maze(maze);
         printf("\nRange:\n");
         printf("x -> 1 - %d\n", COLUMN-2);
@@ -163,13 +163,13 @@ int main(){
         }
         
         //tampilkan hasil
-        system("cls");
+        system("clear");
         maze[cheese.y][cheese.x] = MOUSE;
         view_maze(maze);
     
         printf("\nIngin mengulang [Y/N]? ");
         do{
-            r=getch();
+            r=getchar();
         }while(r!='y' && r!='Y' && r!='n' && r!='N');
     }while(r=='y' || r=='Y');
     return 0;

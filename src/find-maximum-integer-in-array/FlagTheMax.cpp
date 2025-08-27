@@ -13,7 +13,7 @@ int main(){
   int n[9], MAX;
   char r;
   do{
-    system("cls");
+    system("clear");
     printf("Program Pencetak 10 Bilangan\n");
     printf("============================\n");
     printf("* menunjukkan bilangan terbesar\n\n");

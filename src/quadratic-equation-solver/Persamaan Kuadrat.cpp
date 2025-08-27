@@ -7,7 +7,7 @@
   ###################################################*/
 
 #include <stdio.h>
-#include <conio.h>
+
 #include <stdlib.h>
 #include <math.h>
 
@@ -17,7 +17,7 @@ int main(){
   char r;
   do{
     float a=0, b, c, D, Xp, Xd;
-    system("cls");
+    system("clear");
     printf("Pencari Akar-Akar Persamaan Kuadrat\n");
     printf("===================================\n\n");
     printf("ax^2 + bx + c = 0, a != 0\n\n");
@@ -48,7 +48,7 @@ int main(){
       printf("X1 = %0.3f + %0.3fi\nX2 = %0.3f - %0.3fi", Xp, Xd, Xp, Xd);
     printf("\n\nIngin Mengulang [Y/N]? ");
     do{
-      r = getch();
+      r = getchar();
       r = toUpper(r);
     }while(r != 'Y' && r != 'N');
   }while(r == 'Y');

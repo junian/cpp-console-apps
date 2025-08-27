@@ -1,7 +1,7 @@
 //Pengenal Bilangan Prima
 
 #include <stdio.h>
-#include <conio.h>
+
 #include <stdlib.h>
 #include <math.h>
 
@@ -11,7 +11,7 @@ main(){
   char r, isPrime;
   int n;
   do{
-    system("cls");
+    system("clear");
     isPrime = 1;
     printf("Pengenal Bilangan Prima\n");
     printf("=======================\n\n");
@@ -27,7 +27,7 @@ main(){
       printf("\n%d adalah BUKAN BILANGAN PRIMA", n);
     printf("\n\nIngin Mengulang [Y/N]? ");
     do{
-      r = getch();
+      r = getchar();
       r = toUpper(r);
     }while(r != 'Y' && r != 'N');
   }while(r == 'Y');

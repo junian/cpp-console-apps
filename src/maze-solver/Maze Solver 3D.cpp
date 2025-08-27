@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 #include <stdlib.h>
 
 #define LEVEL   5
@@ -152,7 +152,7 @@ int main()
     }
     
     view_maze(maze);
-    getch();
+    getchar();
     return 0;
 }
 

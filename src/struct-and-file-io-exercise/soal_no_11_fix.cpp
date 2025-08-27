@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 #include <stdlib.h>
 
 struct hasil
@@ -66,6 +66,6 @@ int main()
     }
     fclose(ex_file);
     printf("\nData has been saved...");
-    getch();
+    getchar();
     return 0;
 }

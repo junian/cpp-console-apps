@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 #include <stdlib.h>
 #include <string.h>
 
@@ -81,7 +81,7 @@ int main()
     //MAIN MENU
     while(1)
     {
-        system("cls");
+        system("clear");
         printf("\n\t\t\t          MAIN MENU\n");
         printf("\t\t\t*===========================*\n");
         printf("\t\t\t|1.INPUT DATA               |\n");
@@ -96,7 +96,7 @@ int main()
 
         //pilih command
         do{
-            choice = getch();
+            choice = getchar();
         }while(choice < '1' || choice > '6');
         printf("%c\n\n", choice);
 
@@ -114,7 +114,7 @@ int main()
                         add_list(&data, nama, alamat, noTelp);
                         printf("\ningin input lagi? (y/t)");
                         do{
-                            choice = getch();
+                            choice = getchar();
                         }while(choice != 'Y' && choice != 'y' && choice != 'T' && choice != 't');
                       }while(choice == 'Y' || choice == 'y');
                       break;
@@ -184,7 +184,7 @@ int main()
                          }
                          printf("\ningin membuka file lagi? (y/t)");
                          do{
-                            choice = getch();
+                            choice = getchar();
                          }while(choice != 'Y' && choice != 'y' && choice != 'T' && choice != 't');
                       }while(choice == 'Y' || choice == 'y');
                       break;
@@ -206,6 +206,6 @@ int main()
                       return 0;
         }
         printf("\nPress any key to go to main menu...");
-        getch();
+        getchar();
     }
 }

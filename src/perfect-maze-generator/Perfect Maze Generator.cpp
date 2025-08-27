@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 #include <stdlib.h>
 #include <time.h>
 
@@ -27,9 +27,9 @@ void generate_maze(char **maze, int input, int x, int y){
     int trial = 1; //banyak uji coba pengecekan jalan
 
     maze[x][y] = PATH;//jadikan baris x kolom y sebagai jalan
-    system("cls");
+    system("clear");
     view_maze(maze, input);
-    getch();
+    getchar();
 
     while(trial<=4){ //coba sampai 4 kali
         if(trial<=4 && direction==UP){ //cek posisi atas
@@ -76,7 +76,7 @@ int main(){
 
     //Masukkan ukuran maze
     do{
-        system("cls");
+        system("clear");
         printf("MAZE CREATOR\n\nInput Size (0 ~ 30): ");
         fflush(stdin);
         scanf("%d", &n);
@@ -84,7 +84,7 @@ int main(){
 
     if(n==0){
         printf("#");
-        getch();
+        getchar();
         return 0;
     }
 
@@ -114,6 +114,6 @@ int main(){
 
     free(maze);
 
-    getch();
+    getchar();
     return 0;
 }

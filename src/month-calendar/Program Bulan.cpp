@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 
 int main(){
   int bln, thn;
@@ -28,6 +28,6 @@ int main(){
   case 12: printf("Desember, 31"); break;
   }
   printf(" hari");
-  getch();
+  getchar();
   return 0;
 }

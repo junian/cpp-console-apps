@@ -1,7 +1,7 @@
 //Pencetak Bilangan Ganjil
 
 #include <stdio.h>
-#include <conio.h>
+
 #include <stdlib.h>
 
 char toUpper(char);
@@ -10,7 +10,7 @@ main(){
   char r;
   int n;
   do{
-    system("cls");
+    system("clear");
     printf("Pencetak Bilangan Ganjil\n");
     printf("========================\n\n");
     printf("Input N : ");
@@ -20,7 +20,7 @@ main(){
       printf("%4d ", i);
     printf("\n\nIngin Mengulang [Y/N]? ");
     do{
-      r = getch();
+      r = getchar();
       r = toUpper(r);
     }while(r != 'Y' && r != 'N');
   }while(r == 'Y');
