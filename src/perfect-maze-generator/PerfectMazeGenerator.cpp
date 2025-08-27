@@ -14,6 +14,9 @@
 //Tampilkan maze
 void view_maze(char **maze, int input){
     int i, j;
+
+    printf("\n");
+
     for(i=0; i<input; i++){
         for(j=0; j<input; j++)
             printf("%c", maze[i][j]);
@@ -28,7 +31,11 @@ void generate_maze(char **maze, int input, int x, int y){
 
     maze[x][y] = PATH;//jadikan baris x kolom y sebagai jalan
     system("clear");
+    
     view_maze(maze, input);
+
+    printf("\r\n");
+    printf("Press [ENTER] to see the next progress: ");
     getchar();
 
     while(trial<=4){ //coba sampai 4 kali
