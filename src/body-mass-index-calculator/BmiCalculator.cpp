@@ -1,24 +1,23 @@
 /*###################################################
   #                                                 #
-  #   Program Berat Badan Ideal                     #
-  #   Copyright (C) 2008                            #
+  #   Body Mass index Calculator                    #
+  #   Copyright (C) 2008 - Now()                    #
   #   By: Junian Triajianto 5108100038              #
   #                                                 #
   ###################################################*/
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 
 char toUpper(char x);
 
 int main(){
   char r;
   do{
-    system("cls");
+    system("clear");
     float TB, IMT;
     int BB;
-    printf("Program Berat Badan Ideal\n");
+    printf("Body Mass Index Calculator\n");
     printf("=========================\n\n");
     printf("BB   : Berat Badan (kg)\n");
     printf("TB   : Tinggi Badan (m)\n");
@@ -42,7 +41,7 @@ int main(){
       printf("SANGAT GEMUK");
     printf("\n\nIngin Mengulang [Y/N]? ");
     do{
-      r = getch();
+      r = getchar();
       r = toUpper(r);
     }while(r != 'Y' && r != 'N');
   }while(r == 'Y');
