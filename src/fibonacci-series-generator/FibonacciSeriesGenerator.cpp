@@ -1,12 +1,11 @@
 //Pencetak Deret Fibonacci
 
 #include <stdio.h>
-#include <conio.h>
 #include <stdlib.h>
 
 char toUpper(char);
 
-main(){
+int main(){
   char r;
   do{
     int n, x = 0, y = 1, z = 1;
@@ -24,10 +23,12 @@ main(){
     }
     printf("\n\nIngin Mengulang [Y/N]? ");
     do{
-      r = getch();
+      r = getchar();
       r = toUpper(r);
     }while(r != 'Y' && r != 'N');
   }while(r == 'Y');
+
+  return 0;
 }
 
 char toUpper(char x){
