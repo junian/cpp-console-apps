@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <conio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
@@ -25,7 +24,7 @@ int main(){
     system("cls");
     printf("BLACKJACK GAME\n");
     printf("==============\n");
-    printf("(C) 2008 by Uchiha Junichi");
+    printf("Copyright (c) 2008 - Now() Junian.dev");
     shuffleDeck(deck[0]);
     //Give each player 2 cards
     for(i=0; i<=1; i++){
@@ -88,7 +87,7 @@ int main(){
     }
     printf("\n\nWanna try again [Y/N]? ");
     do{
-      r = getch();
+      r = getchar();
     }while(r!='Y' && r!='y' && r!='n' && r!='N');
   }while(r=='Y' || r=='y');
   return 0;
@@ -123,7 +122,7 @@ void command(char *com, int poin){
   printf("[2] STAND\n\n");
   printf("Choose a command: ");
   do{
-    *com = getch();
+    *com = getchar();
     if(*com == '2' && poin < 10){
       printf("You must DRAW A CARD\nChoose a command: ");
       *com = '1';
