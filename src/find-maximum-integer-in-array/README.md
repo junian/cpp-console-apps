@@ -3,5 +3,5 @@
 This code demonstrates how to find maximum integer in an array of integer.
 
 ```shell
-gcc -o app.exe FlagTheMax.cpp && ./app.exe
+APP="flag_max_number"; gcc -o $APP.exe $APP.c && ./$APP.exe
 ```

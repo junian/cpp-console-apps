@@ -3,5 +3,5 @@
 The purpose of this code is to generate Fibonacci Series.
 
 ```shell
-gcc -o app.exe FibonacciSeriesGenerator.cpp && ./app.exe
+APP="fibonacci_generator"; gcc -o $APP.exe $APP.c && ./$APP.exe
 ```
