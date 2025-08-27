@@ -140,7 +140,7 @@ int main()
         // show tokens
         while ((s = exp.getToken()) != "")
         {
-            std::cout << s << std::endl;
+            printf("%s\n", s.c_str());
         }
     }
 
