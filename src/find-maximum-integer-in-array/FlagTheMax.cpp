@@ -2,7 +2,6 @@
 //dengan memberi * untuk yang terbesar
 
 #include <stdio.h>
-#include <conio.h>
 #include <stdlib.h>
 
 char toUpper(char x){
@@ -31,7 +30,7 @@ int main(){
     }
     printf("\n\nIngin Mengulang [Y/N]? ");
       do{
-        r = toUpper(getch());
+        r = toUpper(getchar());
       }while(r != 'Y' && r != 'N');
   }while(r == 'Y');
   return 0;
