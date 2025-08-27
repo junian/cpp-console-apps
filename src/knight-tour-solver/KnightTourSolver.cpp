@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <conio.h>
 #include <stdlib.h>
 
 //mencari jumlah kemungkinan suatu titik untuk menuju ke titik lain sesuai
@@ -97,19 +96,19 @@ void next_step(char **board, int *posX, int*posY){
 
 //tampilkan board
 void view_board(char **board){
-    printf("ÉÍÍÍËÍÍÍËÍÍÍËÍÍÍËÍÍÍËÍÍÍËÍÍÍËÍÍÍ»\n");
+    printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»\n");
     for(int i=0; i<8; i++){
-        printf("º");
+        printf("ï¿½");
         for(int j=0; j<8; j++)
-            printf(" %c º", board[i][j]);
-        if (i<7) printf("\nÌÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍ¹\n");
+            printf(" %c ï¿½", board[i][j]);
+        if (i<7) printf("\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¹\n");
     }
-    printf("\nÈÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍ¼\n");
+    printf("\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼\n");
 }
 
 //gerakkan kuda hingga 64 langkah
 void move_knight(char **board, int *posX, int *posY, char token){
-    system("cls");
+    system("clear");
     printf("x: %d  y: %d\n", *posX, *posY);
     board[*posX][*posY] = token;
     next_step(board, posX, posY);
@@ -120,7 +119,7 @@ void move_knight(char **board, int *posX, int *posY, char token){
     else if(token=='Z'+1) token = 'a';
     else if(token=='z'+1) token = '&';
     view_board(board);
-    getch();
+    getchar();
     
     if (token == '&'+1)
 		return;
@@ -132,7 +131,7 @@ int main(){
     char **board;
     int i, j;
     do{  
-        system("cls");
+        system("clear");
         board = (char**)malloc(sizeof(char*)*8);
         for(i=0; i<8; i++){
             board[i] = (char*)malloc(sizeof(char) * 8);
@@ -143,13 +142,13 @@ int main(){
         
         board[i][j] = '$';
         view_board(board);
-        getch();
+        getchar();
         
         move_knight(board, &i, &j, '0');
         
         printf("\nIngin mengulang [Y/N]? ");
         do{
-            r = getch();
+            r = getchar();
         }while(r!='y' && r!='Y' && r!='n' && r!='N');
         for(i=7; i>=0; i--) free(board[i]);
         free(board);
