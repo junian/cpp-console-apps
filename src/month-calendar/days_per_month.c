@@ -6,6 +6,17 @@ int main()
   {
     int month, year;
 
+    printf("------------------");
+    puts("");
+    printf("Days per month app");
+    puts("");
+    printf("------------------");
+    puts("");
+    puts("");
+    printf("Press [Ctrl] + [C] to exit.");
+    puts("");
+    puts("");
+
     printf("Enter month [1-12]: ");
     fflush(stdout);
     scanf("%d", &month);
@@ -60,6 +71,7 @@ int main()
       break;
     }
     printf(" days.");
+    puts("");
     puts("");
   }
   return 0;
