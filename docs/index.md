@@ -2,9 +2,9 @@
 pageType: home
 
 hero:
-  name: C/C++ Console Apps
-  text: Collection of console / terminal apps written in C/C++
-  tagline: Keep it simple, seriously.
+  name: Apps.cpp
+  text: C/C++ Console Apps
+  tagline: App and Game examples written in C (some in C++) console applications for education, inspiration, and fun.
   actions:
     - theme: brand
       text: Quick Start
