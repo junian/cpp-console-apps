@@ -6,12 +6,8 @@ name: Deploy Rspress site to Pages
 
 on:
   # Runs on pushes targeting the default branch
-  # push:
-  #   branches: ["master"]
-  workflow_run:
-    workflows: ["Build with Emscripten"]
-    types:
-      - completed
+  push:
+    branches: ["master"]
   
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -36,7 +32,6 @@ defaults:
 jobs:
   # Build job
   build:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
