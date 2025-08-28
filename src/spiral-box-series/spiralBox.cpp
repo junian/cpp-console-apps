@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 #include <stdlib.h>
 
 int main(){
@@ -10,7 +9,7 @@ int main(){
     printf("SPIRAL BOX\n");
     printf("==========\n\n");
     printf("Input N : ");
-    fflush(stdin);
+    fflush(stdout);
     scanf("%d", &n);
     int box[n][n];
     limit = n;

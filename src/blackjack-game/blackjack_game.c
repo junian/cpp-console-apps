@@ -7,10 +7,10 @@
 struct player
 {
   int poin;
-  char hand[9][4];
+  char hand[9][12];
 };
 
-void shuffleDeck(char *);
+void shuffle_deck(char *);
 void command(char *, int);
 int value(char);
 
@@ -20,15 +20,16 @@ int main()
   do
   {
     int i;
-    char deck[52][4], card = 0, pos = 2, com;
+    char deck[52][12], card = 0, pos = 2, com;
     struct player gamer, comp;
     gamer.poin = 0;
     comp.poin = 0;
-    system("clear");
-    printf("BLACKJACK GAME\n");
-    printf("==============\n");
-    printf("Copyright (c) 2008 - Now() Junian.dev");
-    shuffleDeck(deck[0]);
+    //system("clear");
+    printf("BLACKJACK GAME ♦️"); puts("");
+    printf("==============\n"); puts("");
+    printf("Copyright (c) 2008 - Now() Junian.dev"); puts("");
+    
+    shuffle_deck(deck[0]);
     // Give each player 2 cards
     for (i = 0; i <= 1; i++)
     {
@@ -44,7 +45,7 @@ int main()
       printf("\n\nYou: ");
       for (i = 0; i < pos; i++)
         printf("%3s ", gamer.hand[i]);
-      printf("\nCom: %3s  %c%c\n\n", comp.hand[0], 177, 177);
+      printf("\nCom: %3s  🃏🃏\n\n", comp.hand[0]);
       command(&com, gamer.poin);
       if (com == '1')
       {
@@ -111,25 +112,28 @@ int main()
   return 0;
 }
 
-void shuffleDeck(char *deck)
+void shuffle_deck(char *deck)
 {
   char i, random;
+
   // Initialize Bridge Cards
-  char bridge[52][4] = {"A\3", "2\3", "3\3", "4\3", "5\3", "6\3", "7\3", "8\3",
-                        "9\3", "10\3", "J\3", "Q\3", "K\3", "A\4", "2\4", "3\4",
-                        "4\4", "5\4", "6\4", "7\4", "8\4", "9\4", "10\4", "J\4",
-                        "Q\4", "K\4", "A\5", "2\5", "3\5", "4\5", "5\5", "6\5",
-                        "7\5", "8\5", "9\5", "10\5", "J\5", "Q\5", "K\5", "A\6",
-                        "2\6", "3\6", "4\6", "5\6", "6\6", "7\6", "8\6", "9\6",
-                        "10\6", "J\6", "Q\6", "K\6"};
+  char bridge[52][12] = {"A❤️", "2❤️", "3❤️", "4❤️", "5❤️", "6❤️", "7❤️", "8❤️",
+                        "9❤️", "10❤️", "J❤️", "Q❤️", "K❤️", "A♦️", "2♦️", "3♦️",
+                        "4♦️", "5♦️", "6♦️", "7♦️", "8♦️", "9♦️", "10♦️", "J♦️",
+                        "Q♦️", "K♦️", "A♠️", "2♠️", "3♠️", "4♠️", "5♠️", "6♠️",
+                        "7♠️", "8♠️", "9♠️", "10♠️", "J♠️", "Q♠️", "K♠️", "A♣️",
+                        "2♣️", "3♣️", "4♣️", "5♣️", "6♣️", "7♣️", "8♣️", "9♣️",
+                        "10♣️", "J♣️", "Q♣️", "K♣️"};
+  
   // Shuffle Deck
   srand(time(NULL));
   for (i = 0; i < 52; i++)
-    for (;;)
+    //for (;;)
     {
       random = rand() % 52;
       if (!strcmp(bridge[random], ""))
         continue;
+        printf("HERE %i\n", i);
       strcpy(deck + 4 * i, bridge[random]);
       strcpy(bridge[random], "");
       break;
