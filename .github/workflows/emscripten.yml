@@ -45,8 +45,6 @@ jobs:
             out="${dir}/${base%.*}.wasm"
             if [[ "$file" == *.c ]]; then
               emcc "$file" -o "$out"
-            else
-              em++ "$file" -o "$out"
             fi
           done
         shell: bash
