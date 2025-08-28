@@ -1,14 +1,14 @@
-# Rspress website
+# C/C++ Console Apps
 
-## Setup
+App and Game examples written in C (some in C++) console applications for education, inspiration, and fun.
+
+## Docs Development
 
 Install the dependencies:
 
 ```bash
 npm install
 ```
-
-## Get started
 
 Start the dev server:
 
