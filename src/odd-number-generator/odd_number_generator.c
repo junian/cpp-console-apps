@@ -6,7 +6,7 @@
 
 char toUpper(char);
 
-main(){
+int main(){
   char r;
   int n;
   do{
