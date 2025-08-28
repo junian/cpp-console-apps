@@ -1,0 +1,58 @@
+name: Build with Emscripten
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  
+  workflow_dispatch:
+
+jobs:
+  emscripten-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Cache Emscripten SDK
+        id: cache-emsdk
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.emscripten_cache
+            emsdk
+          key: emscripten-${{ runner.os }}-${{ hashFiles('emsdk/**') }}
+          restore-keys: |
+            emscripten-${{ runner.os }}-
+
+      - name: Download and install Emscripten
+        run: |
+          git clone https://github.com/emscripten-core/emsdk.git
+          cd emsdk
+          ./emsdk install latest
+          ./emsdk activate latest
+          source ./emsdk_env.sh
+        shell: bash
+
+      - name: Compile all .c and .cpp files recursively
+        run: |
+          source ./emsdk/emsdk_env.sh
+          find . -type f \( -name '*.c' -o -name '*.cpp' \) | while read file; do
+            dir=$(dirname "$file")
+            base=$(basename "$file")
+            out="${dir}/${base%.*}.wasm"
+            if [[ "$file" == *.c ]]; then
+              emcc "$file" -o "$out"
+            else
+              em++ "$file" -o "$out"
+            fi
+          done
+        shell: bash
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: wasm-artifacts
+          path: "**/*.wasm"
