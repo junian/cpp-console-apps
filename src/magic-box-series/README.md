@@ -3,5 +3,5 @@
 It's magic box.
 
 ```shell
-gcc -o app.exe MagicBox.cpp && ./app.exe
+APP="magic_box"; gcc -o $APP.exe $APP.c && ./$APP.exe
 ```
