@@ -11,7 +11,7 @@ hero:
       link: /guide/
     - theme: alt
       text: GitHub
-      link: https://github.com/junian/cpp-awesome-pack/
+      link: https://github.com/junian/cpp-console-apps/
   image:
     src: /rspress-icon.png
     alt: Logo
