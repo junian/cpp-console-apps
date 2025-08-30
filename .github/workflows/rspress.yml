@@ -56,9 +56,9 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      # - name: Setup Pages
-        # id: pages
-        # uses: actions/configure-pages@v5
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
         # with:
           # Automatically inject pathPrefix in your Rspress configuration file.
           #
@@ -78,11 +78,11 @@ jobs:
       - name: Build with Rspress
         env:
           PREFIX_PATHS: 'true'
-        run: ${{ steps.detect-package-manager.outputs.manager }} run build
+        run: cd ./docs/ && ${{ steps.detect-package-manager.outputs.manager }} run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./doc_build
+          path: ./docs/doc_build
 
   # Deployment job
   deploy:
