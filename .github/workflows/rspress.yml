@@ -57,6 +57,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
+          working-directory: ./docs
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
@@ -85,6 +86,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          working-directory: ./docs
           path: ./doc_build
 
   # Deployment job
