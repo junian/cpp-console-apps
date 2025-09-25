@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/35/The_C_Programming_Language_logo.svg" height="128px">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" height="128px">
+<img src="https://raw.githubusercontent.com/junian/commons-media/refs/heads/master/svg/c-logo.svg" height="128px" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/junian/commons-media/refs/heads/master/svg/cpp-logo.svg" height="128px" />
 # C/C++ Console Apps
 
 App and Game examples written in C (some in C++) console applications for education, inspiration, and fun.
