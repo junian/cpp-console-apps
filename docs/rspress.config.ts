@@ -10,6 +10,9 @@ export default defineConfig({
     light: '/rspress-light-logo.png',
     dark: '/rspress-dark-logo.png',
   },
+  route: {
+    cleanUrls: true
+  },
   themeConfig: {
     socialLinks: [
       {
